@@ -2,7 +2,7 @@
 #include "sha512.h"
 #include "ge.h"
 
-void ed25519_compute_pubkey(unsigned char *public_key, unsigned char *private_key) {
+void ed25519_compute_pubkey(unsigned char *public_key, const unsigned char *private_key) {
   ge_p3 A;
   ge_scalarmult_base(&A, private_key);
   ge_p3_tobytes(public_key, &A);
