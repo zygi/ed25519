@@ -9,7 +9,7 @@
 #include <stdio.h>
 #endif
 
-int ed25519_create_seed(unsigned char *seed) {
+static int ed25519_create_seed(unsigned char *seed) {
 #ifdef _WIN32
     HCRYPTPROV prov;
 
